@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4056A1;
+  display: flexbox;
+  color: #ffffff;
+  height: 120px;
+  font-family: 'Bungee', cursive;
+}
+
+span {
+  margin: 1.5em;
+  /* border: 1.5em; */
+  /* padding: 1.5em */
+}
