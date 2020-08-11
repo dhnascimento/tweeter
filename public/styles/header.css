@@ -4,7 +4,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 400px;
-  background-color: #5d6ba1;
+  /* background-color: #5d6ba1; */
   background-image: url("https://www.transparenttextures.com/patterns/cutcube.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -12,5 +12,5 @@ header {
 .username {
   font-size: 24px;
   font-family: 'Bungee', cursive;
-  color: #ffffff;
+  color: #555149;
 }
