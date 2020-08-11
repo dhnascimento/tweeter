@@ -1,0 +1,27 @@
+textarea {
+  border-bottom: 4px solid #383838;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  background-color:transparent;
+  resize: none;
+  width: 500px;
+  height: 40px;
+}
+
+::-webkit-input-placeholder{
+  font-weight: bold;
+  color: #555149
+}
+
+.button-wordcount {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #4051A1;
+  color: #f4f1ec;
+}
