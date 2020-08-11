@@ -6,7 +6,7 @@ textarea {
   background-color:transparent;
   resize: none;
   width: 500px;
-  height: 40px;
+  height: 100px;
 }
 
 ::-webkit-input-placeholder{
