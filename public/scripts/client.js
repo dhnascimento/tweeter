@@ -45,6 +45,10 @@ const renderTweets = function(tweets) {
 
 const createTweetElement = function(tweet, tag, counter) {
   $(document).ready(function () {
+    let date1 = new Date(tweet.created_at);
+    let date2 = new Date(Date.now());
+    let milis = date2 - date1;
+    let days = Math.floor((milis)/(1000 * 3600 * 24));
     
     let html = `<header class="tweettop">
       <div class=userinfo>
@@ -55,7 +59,7 @@ const createTweetElement = function(tweet, tag, counter) {
     </header>
     <p>${tweet.content.text}</p>
     <footer  class="tweetbottom">
-    <span class="tweetinfo">${new Date(tweet.created_at).toString()}</span>
+    <span class="tweetinfo">${days.toString() + " days ago"}</span>
     <span class="tweetinfo">Cool icons here</span>
     </footer>
     </article>`;
