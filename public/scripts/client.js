@@ -44,7 +44,6 @@ const renderTweets = function(tweets) {
 }
 
 const createTweetElement = function(tweet, tag, counter) {
-  $(document).ready(function () {
     let date1 = new Date(tweet.created_at);
     let date2 = new Date(Date.now());
     let milis = date2 - date1;
@@ -66,8 +65,38 @@ const createTweetElement = function(tweet, tag, counter) {
 
   $('section').append(tag);
   return $(`#${counter.toString()}`).append(html);
-  })
+ 
 };
 
 
-renderTweets(data);
+
+
+ const urlTest = '/tweets';
+
+// Method 1
+
+// $(document).ready(function () { 
+//   $('#tweet-form').on('submit', function(e) {
+//     e.preventDefault();
+//     let data = $(this).serialize();
+//     console.log('serialized text: ', data);
+//     $.post('/tweets', data)
+//       .then((res) => console.log('yippy!', res));
+//   })
+
+// Method 2;
+
+$(document).ready(function () { 
+  $('#tweet-form').on('submit', (evt) => {
+  
+    evt.preventDefault(); 
+    let dataT = $('textarea[name="text"]')
+    let newData= dataT.serialize();
+    console.log('Button clicked, performing ajax call...');
+    $.ajax({url: urlTest, data:newData, method: 'POST' })
+      .then((res) => {
+        console.log("yeeey", res)
+        
+      });
+    })
+  });
