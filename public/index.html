@@ -47,12 +47,32 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST" >
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="type-text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+          <textarea name="text"  placeholder="What are you humming about?" id="tweet-text"></textarea>
           <div class="button-wordcount">
             <button type="submit">Tweet</button>
             <output name="counter" id="char-count" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
+        <article>
+          <header class="tweettop">
+            <div class=userinfo>
+              <img class="avatar" src="/images/cat.png">
+              <span class="username">RaNdOmCaT</span>
+            </div>
+            <h5 class="userurl">@rankitten</h5>
+          </header>
+          <p>I'm baby kale chips pabst shabby chic portland disrupt
+           cloud bread truffaut, ramps vegan af. Cred brooklyn roof
+            party pop-up.</p>
+          <footer  class="tweetbottom">
+            <h5>This is going to be the footer</h5>
+            <h5>Cool icons here</h5>
+          </footer>
+        </article>
+
+
+
       </section>
             
 <!--       
