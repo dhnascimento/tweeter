@@ -19,7 +19,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('textarea').on('input', function () {
     let maxChar = 140;
-    let numChar = $('#type-text').val().length;
+    let numChar = $('textarea[name="text"]').val().length;
     let wordCount = maxChar - numChar;
     const colorId = $('#char-count');
     colorId.text(wordCount)
