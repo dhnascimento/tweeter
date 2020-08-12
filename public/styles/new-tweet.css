@@ -5,8 +5,8 @@ textarea {
   border-left-style: hidden;
   background-color:transparent;
   resize: none;
-  width: 500px;
-  height: 120px;
+  width: 100%;
+  height: auto;
 }
 
 ::-webkit-input-placeholder{
@@ -29,3 +29,4 @@ button {
 #char-count.negative {
   color: rgb(207, 12, 12);
 }
+

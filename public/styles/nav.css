@@ -8,6 +8,9 @@ nav {
   color: #ffffff;
   height: 120px;
   font-family: 'Bungee', cursive;
+  position: fixed;
+  width: 100%;
+  top:0;
 }
 
 span {
