@@ -102,3 +102,8 @@ span.username {
 .tweetinfo {
   font-weight: 700;
 }
+
+.alert {
+  color: #7e091c;
+  font-weight:700;
+}
