@@ -36,7 +36,6 @@ const data = [
 const renderTweets = function(tweets) {
   let counter = 1;
   for (const item of tweets ) {
-    console.log(item);
     let tag = `<article id=${counter.toString()}></article>`;
     createTweetElement(item, tag, counter);
     counter ++;
@@ -68,10 +67,7 @@ const createTweetElement = function(tweet, tag, counter) {
  
 };
 
-
-
-
- const urlTest = '/tweets';
+const urlTest = '/tweets';
 
 // Method 1
 
@@ -91,12 +87,33 @@ $(document).ready(function () {
   
     evt.preventDefault(); 
     let dataT = $('textarea[name="text"]')
-    let newData= dataT.serialize();
-    console.log('Button clicked, performing ajax call...');
-    $.ajax({url: urlTest, data:newData, method: 'POST' })
-      .then((res) => {
-        console.log("yeeey", res)
-        
+    let tweetLength = (dataT.val().length);
+    
+    if (tweetLength > 140) {
+      return alert("Your tweet has more than 140 characters!")
+    } else if (tweetLength === 0 || !dataT) {
+      return alert("Please tweet something")
+    } else {
+      let newData= dataT.serialize();
+      console.log('Button clicked, performing ajax call...');
+      $.ajax({url: urlTest, data:newData, method: 'POST' })
+        .then((res) => {
+          console.log("yeeey", res);
       });
-    })
-  });
+    }
+  })
+    
+    
+    
+    const loadTweets = function() {
+      let dataJ = '/data-files/initial-tweets.json';
+      console.log(dataJ);
+      $.ajax({url: '/tweets', method: `GET`})
+      .then((data) => {
+        return renderTweets(data)
+      }) 
+    }
+    
+    loadTweets();    
+    
+});
