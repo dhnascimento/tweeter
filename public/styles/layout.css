@@ -22,7 +22,7 @@ body {
   padding-top: 100px;
 }
 
-main {
+.container {
   width: 90%;
   margin: auto;
   display: flex;
@@ -50,7 +50,7 @@ article {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 
@@ -65,6 +65,10 @@ article:hover  {
 article:hover .userurl {
   color: #95c1eb;
 } 
+
+section {
+  width: 100%
+}
 
 .tweettop {
   border: 15px;
