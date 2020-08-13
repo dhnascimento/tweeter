@@ -69,17 +69,14 @@ const urlTest = '/tweets';
 $(document).ready(function () { 
   loadTweets();
   $('#tweet-form').on('submit', (evt) => {
-  
+    $('.alert').empty();
     evt.preventDefault(); 
     let dataT = $('#tweet-text');
-    // let dataT = $('textarea[name="text"]')
     let tweetLength = (dataT.val().length);
-    console.log(typeof dataT.val());
-    console.log(typeof tweetLength)
 ;    if (tweetLength > 140) {
-      return alert("Your tweet has more than 140 characters!")
+      return $('.new-tweet').prepend('<p class=alert> Your tweet is too long! 140 characters maximum! </p>')
     } else if (tweetLength === 0 || !dataT) {
-      return alert("Please tweet something")
+      return $('.new-tweet').prepend('<p class=alert> Please write something to submit. No empty tweets allowed </p>')
     } else {
       let newData= dataT.serialize();
       console.log('Button clicked, performing ajax call...');
