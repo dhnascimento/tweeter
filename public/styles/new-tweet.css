@@ -1,3 +1,7 @@
+.newtweet {
+  width: 100%;
+}
+
 textarea {
   border-bottom: 4px solid #383838;
   border-top-style: hidden;
