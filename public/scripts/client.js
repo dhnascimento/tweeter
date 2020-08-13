@@ -76,7 +76,7 @@ $(document).ready(function () {
 ;    if (tweetLength > 140) {
       return $('.new-tweet').prepend('<p class=alert> Your tweet is too long! 140 characters maximum! </p>')
     } else if (tweetLength === 0 || !dataT) {
-      return $('.new-tweet').prepend('<p class=alert> Please write something to submit. No empty tweets allowed </p>')
+      return $('.new-tweet').prepend('<p class=alert> Please write something to submit. No empty tweets allowed. </p>')
     } else {
       let newData= dataT.serialize();
       console.log('Button clicked, performing ajax call...');
