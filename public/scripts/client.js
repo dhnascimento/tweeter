@@ -83,7 +83,7 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
   loadTweets();
   $('#tweet-form').on('submit', (evt) => {
-    $('.alert').empty();
+    $('textarea[name="text"]').reset();
     evt.preventDefault();
     let dataT = $('#tweet-text');
     let tweetLength = (dataT.val().length);
@@ -96,7 +96,7 @@ $(document).ready(function() {
       console.log('Button clicked, performing ajax call...');
       $.ajax({url: '/tweets', data:newData, method: 'POST' })
         .then((response) => {
-          $('textarea[name="text"]').val('');
+          $('textarea[name="text"]').val("");
           loadTweets();
         });
     }
