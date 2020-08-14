@@ -4,14 +4,27 @@ header {
   justify-content: center;
   align-items: center;
   height: 400px;
-  /* background-color: #5d6ba1; */
+  background-color: #5d6ba1;
   background-image: url("https://www.transparenttextures.com/patterns/cutcube.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .username {
   font-size: 24px;
   font-family: 'Bungee', cursive;
-  color: #555149;
+  color: #FFFFFF;
 }
 
+
+@media only screen and (max-width: 420px) {
+  header {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
