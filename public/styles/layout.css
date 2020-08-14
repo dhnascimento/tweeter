@@ -34,10 +34,11 @@ body {
 /* For the tweets */
 
 p {
-  text-align: center;
+  text-align: left;
   margin-left: 2.5%;
   margin-right: 2.5%;
   margin-bottom: 1%;
+  word-break: break-word;
 }
 
 
@@ -51,6 +52,7 @@ article {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 250px;
 }
 
 
@@ -73,21 +75,28 @@ section {
 .tweettop {
   border: 15px;
   width: 95%;
-  height: 5%;
-  background-image: none;
+  height: 95%;
+  background-color: transparent;
+  background-image: unset;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
 }
 
 .userinfo {
   display: flex;
-  height:10% ;
-  width: 40% ;
+  height:100% ;
+  width: 65% ;
 }
 
 span.username {
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #545149;
+  width: -webkit-fill-available;
 }
 
 .tweetbottom {
@@ -99,15 +108,68 @@ span.username {
 }
 
 .avatar { 
-  max-width: 20%; 
-  max-height: 20%;
+  object-fit: none;
 }
 
 .tweetinfo {
   font-weight: 700;
 }
 
+article:hover .tweeticons {
+  color:#5d6ba1;
+}
+
 .alert {
   color: #7e091c;
   font-weight:700;
 }
+
+@media only screen and (max-width: 420px) {
+  body {
+    font-size: 16px;
+  }
+  
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  header {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  section.new-tweet {
+    margin-right: 30px;
+    padding-top: 20px;
+
+  }
+
+  .tweetinfo {
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 0.85em;
+  }
+
+  .tweettop {
+    height: 40%;
+    margin-top: inherit;
+  }
+
+}
+
+
+
+
+/* username */
+/* text align center
+/* display flex */
+/* align-items center */
+/* width webkit fill available */
+
