@@ -30,7 +30,6 @@ body {
   align-items: center;
 }
 
-
 /* For the tweets */
 
 p {
@@ -40,7 +39,6 @@ p {
   margin-bottom: 1%;
   word-break: break-word;
 }
-
 
 article {
   margin-top: 20px;
@@ -81,7 +79,6 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 
 .userinfo {
@@ -128,19 +125,11 @@ article:hover .tweeticons {
   body {
     font-size: 16px;
   }
-  
 }
-
-
 
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-  }
-
-  header {
-    margin-right: 20px;
-    margin-left: 20px;
   }
 
   section.new-tweet {
@@ -161,15 +150,4 @@ article:hover .tweeticons {
     height: 40%;
     margin-top: inherit;
   }
-
 }
-
-
-
-
-/* username */
-/* text align center
-/* display flex */
-/* align-items center */
-/* width webkit fill available */
-
