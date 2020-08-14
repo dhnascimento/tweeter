@@ -83,7 +83,7 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
   loadTweets();
   $('#tweet-form').on('submit', (evt) => {
-    $('textarea[name="text"]').reset();
+    $('.alert').empty();
     evt.preventDefault();
     let dataT = $('#tweet-text');
     let tweetLength = (dataT.val().length);
@@ -96,12 +96,13 @@ $(document).ready(function() {
       console.log('Button clicked, performing ajax call...');
       $.ajax({url: '/tweets', data:newData, method: 'POST' })
         .then((response) => {
-          $('textarea[name="text"]').val("");
+          $('#tweet-text').val("");
+          $('#char-count').val(140);
           loadTweets();
         });
     }
   });
-  
+  // 'textarea[name="text"]'
   // Compose button request
   $('.arrowgif' ).click(function() {
     $('textarea').focus();
