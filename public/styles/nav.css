@@ -30,8 +30,6 @@ nav {
 
 span {
   margin: 1.5em;
-  /* border: 1.5em; */
-  /* padding: 1.5em */
 }
 
 @media only screen and (max-width: 420px) {
